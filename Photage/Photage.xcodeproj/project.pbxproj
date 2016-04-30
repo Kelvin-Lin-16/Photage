@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F4275B1B112760B4930E718 /* Pods_Photage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0F3109F2A7443F02B8024 /* Pods_Photage.framework */; };
+		B64A53F61CD4AA5400E249D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A53F51CD4AA5400E249D2 /* AppDelegate.swift */; };
+		B64A53F81CD4AA5400E249D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A53F71CD4AA5400E249D2 /* ViewController.swift */; };
+		B64A53FB1CD4AA5400E249D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64A53F91CD4AA5400E249D2 /* Main.storyboard */; };
+		B64A53FD1CD4AA5400E249D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64A53FC1CD4AA5400E249D2 /* Assets.xcassets */; };
+		B64A54001CD4AA5400E249D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64A53FE1CD4AA5400E249D2 /* LaunchScreen.storyboard */; };
+		B64A540B1CD4AA5400E249D2 /* PhotageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A540A1CD4AA5400E249D2 /* PhotageTests.swift */; };
+		B64A54161CD4AA5400E249D2 /* PhotageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A54151CD4AA5400E249D2 /* PhotageUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B64A54071CD4AA5400E249D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B64A53EA1CD4AA5400E249D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B64A53F11CD4AA5400E249D2;
+			remoteInfo = Photage;
+		};
+		B64A54121CD4AA5400E249D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B64A53EA1CD4AA5400E249D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B64A53F11CD4AA5400E249D2;
+			remoteInfo = Photage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14A0F3109F2A7443F02B8024 /* Pods_Photage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86531118037A6DEF5C4F5248 /* Pods-Photage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photage.release.xcconfig"; path = "Pods/Target Support Files/Pods-Photage/Pods-Photage.release.xcconfig"; sourceTree = "<group>"; };
+		8827FDF9157D6B029C96448D /* Pods-Photage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photage/Pods-Photage.debug.xcconfig"; sourceTree = "<group>"; };
+		B64A53F21CD4AA5400E249D2 /* Photage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B64A53F51CD4AA5400E249D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B64A53F71CD4AA5400E249D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B64A53FA1CD4AA5400E249D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B64A53FC1CD4AA5400E249D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B64A53FF1CD4AA5400E249D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B64A54011CD4AA5400E249D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B64A54061CD4AA5400E249D2 /* PhotageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B64A540A1CD4AA5400E249D2 /* PhotageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotageTests.swift; sourceTree = "<group>"; };
+		B64A540C1CD4AA5400E249D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B64A54111CD4AA5400E249D2 /* PhotageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B64A54151CD4AA5400E249D2 /* PhotageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotageUITests.swift; sourceTree = "<group>"; };
+		B64A54171CD4AA5400E249D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B64A53EF1CD4AA5400E249D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F4275B1B112760B4930E718 /* Pods_Photage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B64A54031CD4AA5400E249D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B64A540E1CD4AA5400E249D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B26DE22A206C0564FC9AAC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8827FDF9157D6B029C96448D /* Pods-Photage.debug.xcconfig */,
+				86531118037A6DEF5C4F5248 /* Pods-Photage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		47401284FAB3ED1FC0357D92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14A0F3109F2A7443F02B8024 /* Pods_Photage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B64A53E91CD4AA5400E249D2 = {
+			isa = PBXGroup;
+			children = (
+				B64A53F41CD4AA5400E249D2 /* Photage */,
+				B64A54091CD4AA5400E249D2 /* PhotageTests */,
+				B64A54141CD4AA5400E249D2 /* PhotageUITests */,
+				B64A53F31CD4AA5400E249D2 /* Products */,
+				1B26DE22A206C0564FC9AAC5 /* Pods */,
+				47401284FAB3ED1FC0357D92 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B64A53F31CD4AA5400E249D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B64A53F21CD4AA5400E249D2 /* Photage.app */,
+				B64A54061CD4AA5400E249D2 /* PhotageTests.xctest */,
+				B64A54111CD4AA5400E249D2 /* PhotageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B64A53F41CD4AA5400E249D2 /* Photage */ = {
+			isa = PBXGroup;
+			children = (
+				B64A53F51CD4AA5400E249D2 /* AppDelegate.swift */,
+				B64A53F71CD4AA5400E249D2 /* ViewController.swift */,
+				B64A53F91CD4AA5400E249D2 /* Main.storyboard */,
+				B64A53FC1CD4AA5400E249D2 /* Assets.xcassets */,
+				B64A53FE1CD4AA5400E249D2 /* LaunchScreen.storyboard */,
+				B64A54011CD4AA5400E249D2 /* Info.plist */,
+			);
+			path = Photage;
+			sourceTree = "<group>";
+		};
+		B64A54091CD4AA5400E249D2 /* PhotageTests */ = {
+			isa = PBXGroup;
+			children = (
+				B64A540A1CD4AA5400E249D2 /* PhotageTests.swift */,
+				B64A540C1CD4AA5400E249D2 /* Info.plist */,
+			);
+			path = PhotageTests;
+			sourceTree = "<group>";
+		};
+		B64A54141CD4AA5400E249D2 /* PhotageUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B64A54151CD4AA5400E249D2 /* PhotageUITests.swift */,
+				B64A54171CD4AA5400E249D2 /* Info.plist */,
+			);
+			path = PhotageUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B64A53F11CD4AA5400E249D2 /* Photage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B64A541A1CD4AA5400E249D2 /* Build configuration list for PBXNativeTarget "Photage" */;
+			buildPhases = (
+				134F7FDEC4ED67599969ECFE /* Check Pods Manifest.lock */,
+				B64A53EE1CD4AA5400E249D2 /* Sources */,
+				B64A53EF1CD4AA5400E249D2 /* Frameworks */,
+				B64A53F01CD4AA5400E249D2 /* Resources */,
+				29314ACFEEB29899E8CE0634 /* Embed Pods Frameworks */,
+				41DF8D3C7B1FC317B73EFED6 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Photage;
+			productName = Photage;
+			productReference = B64A53F21CD4AA5400E249D2 /* Photage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B64A54051CD4AA5400E249D2 /* PhotageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B64A541D1CD4AA5400E249D2 /* Build configuration list for PBXNativeTarget "PhotageTests" */;
+			buildPhases = (
+				B64A54021CD4AA5400E249D2 /* Sources */,
+				B64A54031CD4AA5400E249D2 /* Frameworks */,
+				B64A54041CD4AA5400E249D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B64A54081CD4AA5400E249D2 /* PBXTargetDependency */,
+			);
+			name = PhotageTests;
+			productName = PhotageTests;
+			productReference = B64A54061CD4AA5400E249D2 /* PhotageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B64A54101CD4AA5400E249D2 /* PhotageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B64A54201CD4AA5400E249D2 /* Build configuration list for PBXNativeTarget "PhotageUITests" */;
+			buildPhases = (
+				B64A540D1CD4AA5400E249D2 /* Sources */,
+				B64A540E1CD4AA5400E249D2 /* Frameworks */,
+				B64A540F1CD4AA5400E249D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B64A54131CD4AA5400E249D2 /* PBXTargetDependency */,
+			);
+			name = PhotageUITests;
+			productName = PhotageUITests;
+			productReference = B64A54111CD4AA5400E249D2 /* PhotageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B64A53EA1CD4AA5400E249D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Lins;
+				TargetAttributes = {
+					B64A53F11CD4AA5400E249D2 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					B64A54051CD4AA5400E249D2 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = B64A53F11CD4AA5400E249D2;
+					};
+					B64A54101CD4AA5400E249D2 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = B64A53F11CD4AA5400E249D2;
+					};
+				};
+			};
+			buildConfigurationList = B64A53ED1CD4AA5400E249D2 /* Build configuration list for PBXProject "Photage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B64A53E91CD4AA5400E249D2;
+			productRefGroup = B64A53F31CD4AA5400E249D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B64A53F11CD4AA5400E249D2 /* Photage */,
+				B64A54051CD4AA5400E249D2 /* PhotageTests */,
+				B64A54101CD4AA5400E249D2 /* PhotageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B64A53F01CD4AA5400E249D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64A54001CD4AA5400E249D2 /* LaunchScreen.storyboard in Resources */,
+				B64A53FD1CD4AA5400E249D2 /* Assets.xcassets in Resources */,
+				B64A53FB1CD4AA5400E249D2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B64A54041CD4AA5400E249D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B64A540F1CD4AA5400E249D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		134F7FDEC4ED67599969ECFE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		29314ACFEEB29899E8CE0634 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photage/Pods-Photage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41DF8D3C7B1FC317B73EFED6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photage/Pods-Photage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B64A53EE1CD4AA5400E249D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64A53F81CD4AA5400E249D2 /* ViewController.swift in Sources */,
+				B64A53F61CD4AA5400E249D2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B64A54021CD4AA5400E249D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64A540B1CD4AA5400E249D2 /* PhotageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B64A540D1CD4AA5400E249D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64A54161CD4AA5400E249D2 /* PhotageUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B64A54081CD4AA5400E249D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B64A53F11CD4AA5400E249D2 /* Photage */;
+			targetProxy = B64A54071CD4AA5400E249D2 /* PBXContainerItemProxy */;
+		};
+		B64A54131CD4AA5400E249D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B64A53F11CD4AA5400E249D2 /* Photage */;
+			targetProxy = B64A54121CD4AA5400E249D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B64A53F91CD4AA5400E249D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B64A53FA1CD4AA5400E249D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B64A53FE1CD4AA5400E249D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B64A53FF1CD4AA5400E249D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B64A54181CD4AA5400E249D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B64A54191CD4AA5400E249D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B64A541B1CD4AA5400E249D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8827FDF9157D6B029C96448D /* Pods-Photage.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Photage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Photage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B64A541C1CD4AA5400E249D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86531118037A6DEF5C4F5248 /* Pods-Photage.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Photage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Photage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B64A541E1CD4AA5400E249D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PhotageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PhotageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photage.app/Photage";
+			};
+			name = Debug;
+		};
+		B64A541F1CD4AA5400E249D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PhotageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PhotageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photage.app/Photage";
+			};
+			name = Release;
+		};
+		B64A54211CD4AA5400E249D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PhotageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PhotageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Photage;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B64A54221CD4AA5400E249D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PhotageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PhotageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Photage;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B64A53ED1CD4AA5400E249D2 /* Build configuration list for PBXProject "Photage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B64A54181CD4AA5400E249D2 /* Debug */,
+				B64A54191CD4AA5400E249D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B64A541A1CD4AA5400E249D2 /* Build configuration list for PBXNativeTarget "Photage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B64A541B1CD4AA5400E249D2 /* Debug */,
+				B64A541C1CD4AA5400E249D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B64A541D1CD4AA5400E249D2 /* Build configuration list for PBXNativeTarget "PhotageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B64A541E1CD4AA5400E249D2 /* Debug */,
+				B64A541F1CD4AA5400E249D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B64A54201CD4AA5400E249D2 /* Build configuration list for PBXNativeTarget "PhotageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B64A54211CD4AA5400E249D2 /* Debug */,
+				B64A54221CD4AA5400E249D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B64A53EA1CD4AA5400E249D2 /* Project object */;
+}
