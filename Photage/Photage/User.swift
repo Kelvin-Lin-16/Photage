@@ -8,6 +8,25 @@
 
 import Foundation
 
-class User:NSObject{
+class User: NSObject{
+    
+    var token: String = ""
+    var profileURL: String = ""
+    var name: String = ""
+    
+    func isLoggedIn() -> Bool {
+        return !token.isEmpty
+    }
+    
+    class var instance: User {
+        struct Static {
+            static var onceToken: dispatch_once_t = 0
+            static var instance: User? = nil
+        }
+        dispatch_once(&Static.onceToken) {
+            Static.instance = User()
+        }
+        return Static.instance!
+    }
     
 }
