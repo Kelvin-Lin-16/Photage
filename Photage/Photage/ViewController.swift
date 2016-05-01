@@ -11,6 +11,8 @@ import InstagramKit
 import SDWebImage
 import TOCropViewController
 import FillableLoaders
+import Zip
+import AFNetworking
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, TOCropViewControllerDelegate {
 
@@ -28,6 +30,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     private var imageArray:[AnyObject]!
     private var loader: FillableLoader = FillableLoader()
+    private var isLoggedIn = false
+    private var progress:Double! = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +39,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.dataSource = self
         imageArray = []
         zipButton.enabled = false
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateAuthStatus", name: "InstaAuthed", object: nil)
+        updateUI()
     }
     
     override func viewDidAppear(animated: Bool) {
-        let isLoggedIn = User.instance.isLoggedIn()
+
+    }
+    
+    func updateAuthStatus() {
+        isLoggedIn = User.instance.isLoggedIn()
+        if isLoggedIn{
+            fetchProfile()
+            fetchImages()
+            updateUI()
+        }
+    }
+    
+    func updateUI(){
         //Hide components if a user has not signed in yet.
         headerView.hidden = !isLoggedIn
         collectionView.hidden = !isLoggedIn
@@ -46,11 +64,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         welcomeLabel.hidden = isLoggedIn
         signButton.hidden = isLoggedIn
-        
-        if isLoggedIn{
-            fetchProfile()
-            fetchImages()
-        }
     }
     
     //Fetch current user's profile(name, profile photo url)
@@ -73,7 +86,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 if let mediaArray:[InstagramMedia] = medias{
                     for media in mediaArray{
                         if self.imageArray.count<10{
-                            self.imageArray.append(media.thumbnailURL)   
+                            self.imageArray.append(media.standardResolutionImageURL)   
                         }
                     }
                     self.collectionView.reloadData()
@@ -113,6 +126,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //Process cropping
     func cropViewController(cropViewController: TOCropViewController!, didCropToImage image: UIImage!, withRect cropRect: CGRect, angle: Int) {
         imageArray.append(image)
+        User.instance.images.append(image)
         let indexPath = NSIndexPath(forRow: imageArray.count-1, inSection: 0)
         collectionView.insertItemsAtIndexPaths([indexPath])
         zipButton.enabled = true
@@ -122,12 +136,82 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //Save images, zip and upload
     @IBAction func didTapZip(sender: AnyObject) {
         loader = WavesLoader.showProgressBasedLoaderWithPath(githubPath())
-        loader.progress = CGFloat(0.8)
+        updateProgress(0.0)
+        var paths:[NSURL] = []
+        //Save images to a directory
+        for(var i = 0; i<User.instance.images.count;i++){
+            if let data = UIImageJPEGRepresentation(User.instance.images[i] , 0.95) {
+                let filename = getDocumentsDirectory().stringByAppendingPathComponent("\(i).jpg")
+                let url:NSURL = NSURL(fileURLWithPath: filename)
+                data.writeToURL(url, atomically: true)
+                paths.append(url)
+                updateProgress(0.02)
+            }
+        }
+        //Zip the directory
+        do {
+            let zipFilePath = try Zip.quickZipFiles(paths, fileName: "archive")
+            updateProgress(0.2)
+            //Upload
+            let data:NSData = NSData(contentsOfURL:zipFilePath)!//UIImageJPEGRepresentation(User.instance.images[0] , 0.8)!
+            let url = "http://www.linsapp.com/api/messages/zip"
+            let request = AFHTTPRequestSerializer().multipartFormRequestWithMethod("POST", URLString: url, parameters: nil, constructingBodyWithBlock: { (formData) -> Void in
+                //print(data)
+                print(data.length)
+                formData.appendPartWithFileData(data, name: "imageZip", fileName: "archive.zip", mimeType: "application/zip")
+                }, error: nil)
+            
+            let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+            let manager = AFURLSessionManager.init(sessionConfiguration: configuration)
+            let uploadTask:NSURLSessionUploadTask = manager.uploadTaskWithStreamedRequest(request, progress: {   uploadProgress -> Void in
+                let progress:NSProgress = uploadProgress
+                print(progress.fractionCompleted)
+                self.updateProgress(progress.fractionCompleted/2.0)
+                }, completionHandler: { (response, responseObject, error) -> Void in
+                    let resp = response as! NSHTTPURLResponse
+                    let code:NSInteger = resp.statusCode
+                    self.loader.removeLoader()
+                    if code != 201{
+                        self.showAlert("Error",message: "\(code)")
+                    }else{
+                        self.showAlert("Success", message: "The zip file has been uploaded.")
+                    }
+                    print(resp.statusCode)
+                    print(responseObject)
+                    
+            })
+            uploadTask.resume()
+        }
+        catch let error as NSError{
+            print("Error[didTapZip]: \(error.localizedDescription)")
+        }
+    }
+    
+    func updateProgress(delta:Double){
+        progress = progress + delta
+        loader.progress = CGFloat(progress)
+    }
+    
+    func showAlert(title:String, message:String) {
+        let alertController = UIAlertController(title: title, message:
+            message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func getDocumentsDirectory() -> NSString {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
     func githubPath() -> CGPath {

@@ -32,6 +32,7 @@ class AuthViewController: UIViewController, UIWebViewDelegate{
             if !accessToken.isEmpty{
                 User.instance.token = accessToken
                 print("[receivedValidAccessTokenFromURL]:Authed")
+                NSNotificationCenter.defaultCenter().postNotificationName("InstaAuthed", object: self)
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         } catch let error as NSError {

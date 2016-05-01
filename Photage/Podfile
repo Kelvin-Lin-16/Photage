@@ -4,7 +4,7 @@ platform :ios, ‘9.0’
 use_frameworks!
 
 target ‘Photage’ do
-    pod 'AFNetworking', '~> 3.0'
+    pod 'AFNetworking', '~> 3.1'
     pod 'SDWebImage', '3.7.0'
     pod 'InstagramKit', '~> 3.8'
     pod 'TOCropViewController', '~> 1.3'
