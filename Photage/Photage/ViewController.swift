@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var signButton: UIButton!
     @IBOutlet weak var cropButton: UIButton!
     @IBOutlet weak var fetchButton: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +37,6 @@ class ViewController: UIViewController {
         
         welcomeLabel.hidden = isLoggedIn
         signButton.hidden = isLoggedIn
-    }
-
-    @IBAction func didTapAuth(sender: AnyObject) {
-        
     }
     
     @IBAction func didTapFetch(sender: AnyObject) {

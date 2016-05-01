@@ -157,7 +157,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <action selector="didTapAuth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZCV-at-DvS"/>
+                                    <segue destination="Eu3-gu-6D6" kind="presentation" id="6g1-Cc-V2C"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -196,6 +196,69 @@
             </objects>
             <point key="canvasLocation" x="1021" y="316"/>
         </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="A0J-Pd-zWp">
+            <objects>
+                <viewController id="Eu3-gu-6D6" customClass="AuthViewController" customModule="Photage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D5d-Tf-CWh"/>
+                        <viewControllerLayoutGuide type="bottom" id="IZc-mo-vjM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v5X-zW-JWo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXg-x2-7iy">
+                                <rect key="frame" x="0.0" y="58" width="600" height="542"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TK-fY-cIb">
+                                <rect key="frame" x="10" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="C9n-ig-7sv"/>
+                                    <constraint firstAttribute="height" constant="30" id="gFN-j4-ohU"/>
+                                    <constraint firstAttribute="width" constant="46" id="nz4-5q-tmy"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="C9n-ig-7sv"/>
+                                        <exclude reference="gFN-j4-ohU"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="didTapClose:" destination="Eu3-gu-6D6" eventType="touchUpInside" id="HO9-Eh-5Sd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7TK-fY-cIb" firstAttribute="leading" secondItem="v5X-zW-JWo" secondAttribute="leadingMargin" constant="-10" id="HCB-1a-bAB"/>
+                            <constraint firstItem="7TK-fY-cIb" firstAttribute="top" secondItem="D5d-Tf-CWh" secondAttribute="bottom" id="Kou-oz-DQ5"/>
+                            <constraint firstItem="7TK-fY-cIb" firstAttribute="top" secondItem="D5d-Tf-CWh" secondAttribute="bottom" id="LWx-fG-CgY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oXg-x2-7iy" secondAttribute="trailing" constant="-20" id="dSS-t9-MdP"/>
+                            <constraint firstItem="oXg-x2-7iy" firstAttribute="leading" secondItem="v5X-zW-JWo" secondAttribute="leadingMargin" constant="-20" id="ijV-Y7-ENw"/>
+                            <constraint firstItem="7TK-fY-cIb" firstAttribute="leading" secondItem="v5X-zW-JWo" secondAttribute="leadingMargin" constant="-10" id="pFc-Cc-oyV"/>
+                            <constraint firstItem="oXg-x2-7iy" firstAttribute="top" secondItem="7TK-fY-cIb" secondAttribute="bottom" constant="8" id="pap-u1-j5d"/>
+                            <constraint firstItem="IZc-mo-vjM" firstAttribute="top" secondItem="oXg-x2-7iy" secondAttribute="bottom" id="uoW-X6-AFK"/>
+                            <constraint firstItem="oXg-x2-7iy" firstAttribute="top" secondItem="7TK-fY-cIb" secondAttribute="bottom" constant="8" id="ztv-Gg-8k9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LWx-fG-CgY"/>
+                                <exclude reference="pFc-Cc-oyV"/>
+                                <exclude reference="pap-u1-j5d"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="oXg-x2-7iy" id="O7F-lS-amB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCj-1U-iw8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749" y="316"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="72d-tJ-T9L">
             <objects>
@@ -212,7 +275,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTo-wJ-Nbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="191" y="304"/>
+            <point key="canvasLocation" x="291" y="316"/>
         </scene>
     </scenes>
     <resources>
