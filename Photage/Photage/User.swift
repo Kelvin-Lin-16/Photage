@@ -6,13 +6,14 @@
 //  Copyright © 2016 Lins. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class User: NSObject{
     
     var token: String = ""
     var profileURL: String = ""
     var name: String = ""
+    var images:[UIImage] = []
     
     func isLoggedIn() -> Bool {
         return !token.isEmpty

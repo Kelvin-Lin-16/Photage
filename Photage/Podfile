@@ -7,4 +7,7 @@ target ‘Photage’ do
     pod 'AFNetworking', '~> 3.0'
     pod 'SDWebImage', '3.7.0'
     pod 'InstagramKit', '~> 3.8'
+    pod 'TOCropViewController', '~> 1.3'
+    pod 'FillableLoaders', '~> 1.2'
+    pod 'Zip', '~> 0.3'
 end

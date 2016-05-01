@@ -18,6 +18,7 @@ class AuthViewController: UIViewController, UIWebViewDelegate{
         super.viewDidLoad()
         let authURL = InstagramEngine.sharedEngine().authorizationURL()
         self.webView.loadRequest(NSURLRequest(URL: authURL))
+        self.webView.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,8 +28,14 @@ class AuthViewController: UIViewController, UIWebViewDelegate{
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         do {
             try InstagramEngine.sharedEngine().receivedValidAccessTokenFromURL(request.URL!)
+            let accessToken = InstagramEngine.sharedEngine().accessToken!
+            if !accessToken.isEmpty{
+                User.instance.token = accessToken
+                print("[receivedValidAccessTokenFromURL]:Authed")
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
         } catch let error as NSError {
-            print("Error: \(error.localizedDescription)")
+            print("Error[receivedValidAccessTokenFromURL]: \(error.localizedDescription)")
         }
         return true
     }
