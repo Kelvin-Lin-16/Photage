@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		397380281CD5BF310078894F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397380271CD5BF310078894F /* ImageCell.swift */; };
 		5F4275B1B112760B4930E718 /* Pods_Photage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0F3109F2A7443F02B8024 /* Pods_Photage.framework */; };
 		B64A53F61CD4AA5400E249D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A53F51CD4AA5400E249D2 /* AppDelegate.swift */; };
 		B64A53F81CD4AA5400E249D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A53F71CD4AA5400E249D2 /* ViewController.swift */; };
@@ -15,6 +16,8 @@
 		B64A54001CD4AA5400E249D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64A53FE1CD4AA5400E249D2 /* LaunchScreen.storyboard */; };
 		B64A540B1CD4AA5400E249D2 /* PhotageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A540A1CD4AA5400E249D2 /* PhotageTests.swift */; };
 		B64A54161CD4AA5400E249D2 /* PhotageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A54151CD4AA5400E249D2 /* PhotageUITests.swift */; };
+		B6A700CF1CD5333700E86703 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A700CE1CD5333700E86703 /* User.swift */; };
+		B6A700D11CD54E8100E86703 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A700D01CD54E8100E86703 /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		14A0F3109F2A7443F02B8024 /* Pods_Photage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		397380271CD5BF310078894F /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		86531118037A6DEF5C4F5248 /* Pods-Photage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photage.release.xcconfig"; path = "Pods/Target Support Files/Pods-Photage/Pods-Photage.release.xcconfig"; sourceTree = "<group>"; };
 		8827FDF9157D6B029C96448D /* Pods-Photage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photage/Pods-Photage.debug.xcconfig"; sourceTree = "<group>"; };
 		B64A53F21CD4AA5400E249D2 /* Photage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +55,8 @@
 		B64A54111CD4AA5400E249D2 /* PhotageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B64A54151CD4AA5400E249D2 /* PhotageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotageUITests.swift; sourceTree = "<group>"; };
 		B64A54171CD4AA5400E249D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6A700CE1CD5333700E86703 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B6A700D01CD54E8100E86703 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +127,15 @@
 		B64A53F41CD4AA5400E249D2 /* Photage */ = {
 			isa = PBXGroup;
 			children = (
-				B64A53F51CD4AA5400E249D2 /* AppDelegate.swift */,
-				B64A53F71CD4AA5400E249D2 /* ViewController.swift */,
-				B64A53F91CD4AA5400E249D2 /* Main.storyboard */,
-				B64A53FC1CD4AA5400E249D2 /* Assets.xcassets */,
 				B64A53FE1CD4AA5400E249D2 /* LaunchScreen.storyboard */,
+				B64A53F91CD4AA5400E249D2 /* Main.storyboard */,
+				B64A53F51CD4AA5400E249D2 /* AppDelegate.swift */,
+				B6A700CE1CD5333700E86703 /* User.swift */,
+				B6A700D01CD54E8100E86703 /* AuthViewController.swift */,
+				397380271CD5BF310078894F /* ImageCell.swift */,
+				B64A53F71CD4AA5400E249D2 /* ViewController.swift */,
 				B64A54011CD4AA5400E249D2 /* Info.plist */,
+				B64A53FC1CD4AA5400E249D2 /* Assets.xcassets */,
 			);
 			path = Photage;
 			sourceTree = "<group>";
@@ -331,8 +340,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A700D11CD54E8100E86703 /* AuthViewController.swift in Sources */,
 				B64A53F81CD4AA5400E249D2 /* ViewController.swift in Sources */,
 				B64A53F61CD4AA5400E249D2 /* AppDelegate.swift in Sources */,
+				B6A700CF1CD5333700E86703 /* User.swift in Sources */,
+				397380281CD5BF310078894F /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
